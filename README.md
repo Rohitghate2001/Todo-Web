@@ -3,7 +3,12 @@ A todo lsit website where you can create todos edit and delete them
 
 
 
-https://github.com/Rohitghate2001/Todo-Web/assets/147127996/fb801bd6-bb07-47c2-ab8b-082685b90b8f
+
+
 
  
+
+https://github.com/Rohitghate2001/Todo-Web/assets/147127996/d1ddde55-9218-4e67-8114-f0a5747d0c11
+
+
 
