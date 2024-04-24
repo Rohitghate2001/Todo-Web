@@ -1,0 +1,35 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<div style="display: grid; grid-template-columns: repeat(5,1fr);">
+{% for t in todo %}
+
+
+<div class="card product-box" style="width: 25rem; margin: 10px; background-color:#fafad2; height: 200px; padding: 3px 3px 3px 3px; padding-left: 2px;">
+    <div class="card-body" style="text-align: center;">
+      <h3 class="card-title" style="font-weight: bold; text-align: center; ">{{t.title}}</h3>
+      <p class="card-text"><b>created at: </b>{{t.created_at}} </p>
+      <div style="height: 30px;">
+      <p class="card-text"><b>Description: </b> {{t.desc}}</p>
+
+    </div>
+      <br><br>
+      <button><a href="{% url 'edit-todo' t.id %}" class="card-link">Edit </a></button>
+      <button><a href="{% url 'delete-todo' t.id %}" class="card-link">delete</a></button>
+
+      
+      {% if t.completed %}
+
+      <button style="background-color: green;"><a href="{% url 'complete-todo' t.id %}" class="card-link" style="color: #fafad2;">Completed</a></button>
+
+      {% else %}
+      <button><a href="{% url 'complete-todo' t.id %}" class="card-link">Complete</a></button>
+
+      {% endif %}
+    </div>
+  </div>
+
+{% endfor %}
+</div>
+
+{% endblock content %}
